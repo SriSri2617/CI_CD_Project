@@ -1,0 +1,46 @@
+1. What benefits can you see with CI & CD in your workplace?
+
+	- Faster releases: New features and fixes can be delivered to customers more quickly.
+	- Fewer errors: Automated testing helps identify bugs early, before changes reach production.
+	- Better code quality: Developers integrate their work frequently, reducing conflicts and making issues     easier to troubleshoot.
+	- Automation: Builds, tests, and deployments can be automated, reducing manual work and repetitive          tasks.
+	- Improved collaboration: Teams work with smaller, more frequent changes, making it easier to               coordinate development.
+	- Quick feedback: Developers receive immediate feedback when something breaks, allowing problems to be      fixed sooner.
+	- Lower deployment risk: Smaller, regular releases are generally easier and safer to manage than large      releases.
+	- More reliable software: Automated testing and consistent deployment processes make production             releases more predictable.
+
+
+2. What's the point of linting?
+
+	The main point of linting is to automatically check your code for common mistakes, potential bugs, and    style problems before they cause issues.
+
+	For example, a linter can detect:
+		- Unused variables or imports
+		- Syntax or coding errors
+		- Inconsistent formatting or naming
+		- Potential bugs or suspicious code
+		- Code that doesn't follow your team's standards
+
+	In short: linting keeps code clean, consistent, and less error-prone, and it can catch problems           early—often before the code is committed or deployed.
+
+	Code Linting (flake8): Performs static code analysis without executing the program. It automatically      flags syntax errors, unused imports, security vulnerabilities, unassigned variables, and formatting       violations before execution.
+
+
+3. How to work with git and multiple branches within a team?
+
+	Main Branch (main): Represents production-ready code. Direct commits to main are strictly blocked via     branch protection rules; code only enters main through reviewed and verified pull requests.
+	Development Branch (dev): Serves as the primary integration branch for ongoing sprint work. Team          members merge completed feature branches into dev to verify combined functionality before releasing to    main.
+	Feature Branches (feature/feature-name): Isolated branches created off dev for short-lived tasks (e.g., feature/login-auth or bugfix/payment-gateway).
+	Team Strategy Improvements:
+		- Require branch protection rules so that pipelines must pass green before merging.
+		- Rebase feature branches regularly against dev to resolve merge conflicts early in local developer         environments.
+		- Keep feature branches small and short-lived to avoid large, complex merge conflicts.
+
+
+4. What is a pull request?
+	- Code Merge Request
+		A Pull Request (PR) is a formal mechanism in git platforms (GitHub, GitLab, Bitbucket) asking merge       code from a source branch (e.g., feature/shopping-cart) into a target branch (e.g., dev).
+	- Quality & Security Gate
+		PRs serve as the primary code review interface where team members inspect code readability,               architecture, and security before approving the changes.
+	- Automated CI Validation
+		PRs automatically trigger CI/CD pipelines to run test suites and linters against the proposed             changes. Merging is typically blocked until all pipeline checks pass and required peer approvals          are submitted.
