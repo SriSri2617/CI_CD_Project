@@ -9,7 +9,7 @@ def test_payment_success(mocker):
     # products - name, price & qty
     products = [("soft toys", 100, 2),
                  ("Toy cars", 250, 1)]
-
+    
     order = Order(products)
     gateway = PaymentGateway()
 
@@ -33,7 +33,7 @@ def test_payment_failure(mocker):
     # products - name, price & qty
     products = [("soft toys", 100, 2),
                 ("Toy cars", 250, 1)]
-
+    
     order = Order(products)
     gateway = PaymentGateway()
 
