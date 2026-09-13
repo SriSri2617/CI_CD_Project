@@ -11,12 +11,11 @@ class Order:
             total += price * qty
         return total
 
-
     def make_payment(self, payment_gateway):
         # total amount to pay
         total = self.calculate_total()
 
-        #external payment service
+        # external payment service
         total_amt = payment_gateway.execute_payment(total)
 
         if total_amt:

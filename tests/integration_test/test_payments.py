@@ -6,8 +6,8 @@ from src.paymentgateway import PaymentGateway
 @pytest.mark.integration
 # successful payment
 def test_payment_success(mocker):
-    #products - name, price & qty
-    products = [ ("soft toys", 100, 2),
+    # products - name, price & qty
+    products = [("soft toys", 100, 2),
                  ("Toy cars", 250, 1)]
 
     order = Order(products)
